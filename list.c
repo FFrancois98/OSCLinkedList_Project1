@@ -1,14 +1,15 @@
-// Source File for Operating Systems C-Linked List for storing strings
+/* Source File for Operating Systems C-Linked List for storing strings*/
 
 #include "list.h"
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 
 /* Adds the string to node*/
 node* create_node(char* item) {
     node* new_node = malloc(sizeof(node));
-    int len = strlen(item)
+    int len = strlen(item);
     char* new_str = malloc(len + 1);
     strncpy(new_str, item, len);
     new_node->data = new_str;
@@ -19,8 +20,9 @@ node* create_node(char* item) {
 /* Allocates and initializes a new list */
 list* create_list() {
     list* lst = malloc(sizeof(list));
-    list->head = NULL;
-    return list;
+    lst->head = NULL;
+    lst->tail = NULL;
+    return lst;
 }
 
 /* Adds item to end of the list. This function allocates a
@@ -51,15 +53,16 @@ int add_to_list(list* ll, char* item) {
 char* remove_from_list(list* ll) {
     node* temp_remov = malloc(sizeof(node));
     temp_remov = ll->head;
+    char* deleted_str = malloc(sizeof(temp_remov->data));
 
     if (ll->head == ll->tail) {
-        char* deleted_str = temp_remov->data;
+        deleted_str = temp_remov->data;
         free(ll->tail);
         ll->head = NULL;
         ll->tail = NULL;
     }
     else {
-        char* deleted_str = temp_remov->data;
+        deleted_str = temp_remov->data;
         ll->head = temp_remov->next;
         free(temp_remov);
     }
@@ -73,7 +76,7 @@ void print_list(list *ll){
     curr = ll -> head;
     printf("Starting the print list function\n");
     while (curr != NULL){
-        printf("%s \n", curr -> data);
+        printf("\t%s \n", curr -> data);
         curr = curr -> next;
     }
     printf("Ended the print list function\n");
@@ -95,7 +98,6 @@ void flush_list(list* ll){
     }
     free(next);
     free(ll);
-
     ll = create_list();
     return;
 }

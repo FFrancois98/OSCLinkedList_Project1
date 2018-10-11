@@ -1,16 +1,16 @@
-// Header File for Operating Systems C-Linked List for storing strings
+/* Header File for Operating Systems C-Linked List for storing strings*/
 
 #ifndef LIST_H_INCLUDED
 #define LIST_H_INCLUDED
 
-// Definition of the node
+/* Definition of the node*/
 
 typedef struct node {
     char* data;             // string w/o having to be preallocated with mem size
     struct node* next;
 }node;
 
-// Definition of the list
+/* Definition of the list*/
 typedef struct list {
     node* head;
     node* tail;

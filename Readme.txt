@@ -19,4 +19,3 @@ Resources:
 - http://cslibrary.stanford.edu/101/
 - http://cslibrary.stanford.edu/102/
 - http://cslibrary.stanford.edu/103/
-

@@ -7,11 +7,11 @@ It includes functions that will enable you to create a list, add items to a list
 flush or free the list. 
 
 Compiling and Running the Program:
-- In a Linux or Mac based system run "make" in the main directory to make sure the executable file is up to date. Afterwards, run "./output" in the command line.
-- In a Windows, a linux bassed subsystem is needs to be downloaded and once that is up and running, follow the same steps as in a Linux/Mac system.
+- In a Linux or Mac based system run "make" in the main directory to make sure the executable file is up-to-date. Afterwards, run "./output" in the command line.
+- In a Windows, a linux-based subsystem needs to be downloaded and once that is up and running, follow the same steps as in a Linux/Mac system.
 
 Challenges:
-- Learning the C langauge and learning to create a Makefile
+- Learning the C langauge and learning to create a Makefile.
 
 Resources:
 - http://cslibrary.stanford.edu/
